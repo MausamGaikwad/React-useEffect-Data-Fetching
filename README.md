@@ -5,7 +5,7 @@ Built to demonstrate React Hooks, API fetching, loading states, and error handli
 
 ---
 
-### 🚀 Features
+## 🚀 Features
 
 - Fetches user data from https://jsonplaceholder.typicode.com/users
 - Displays name and email for each user
@@ -15,7 +15,7 @@ Built to demonstrate React Hooks, API fetching, loading states, and error handli
 
 ---
 
-### 🛠️ Tech Stack
+## 🛠️ Tech Stack
 
 - React (with Hooks: useState, useEffect)
 - JavaScript (ES6+)
@@ -23,7 +23,7 @@ Built to demonstrate React Hooks, API fetching, loading states, and error handli
 
 ---
 
-### 📦 Installation & Setup
+## 📦 Installation & Setup
 
 ```bash
 # Clone the repository
@@ -41,7 +41,7 @@ npm start
 
 ---
 
-### 📚 How It Works
+## 📚 How It Works
 
 - useEffect runs once when the component mounts.
 - The app makes an API call using fetch.
@@ -49,7 +49,8 @@ npm start
 - If successful, it lists all users’ names and emails.
 - If there's an error, it shows an error message in red.
 
-### 🖥️ UI Preview
+---
+## 🖥️ UI Preview
 
 ```text
 
@@ -61,7 +62,7 @@ Jane Smith – jane@example.com
 
 ---
 
-### 🧑‍💻 Code Example
+## 🧑‍💻 Code Example
 
 ```javascript
 useEffect(() => {
@@ -83,6 +84,6 @@ useEffect(() => {
 
 ---
 
-### 📜 License
+## 📜 License
 
 This project is licensed under the MIT License – free to use and modify.
