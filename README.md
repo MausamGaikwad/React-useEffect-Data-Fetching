@@ -1,12 +1,88 @@
-# React + Vite
+# 👥 User Fetcher App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React application that fetches and displays a list of users from an API using the fetch method.
+Built to demonstrate React Hooks, API fetching, loading states, and error handling.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 🚀 Features
 
-## Expanding the ESLint configuration
+- Fetches user data from https://jsonplaceholder.typicode.com/users
+- Displays name and email for each user
+- Loading indicator while fetching
+- Error handling for failed requests
+- Clean and minimal UI
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+### 🛠️ Tech Stack
+
+- React (with Hooks: useState, useEffect)
+- JavaScript (ES6+)
+- HTML5 & CSS3
+
+---
+
+### 📦 Installation & Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/user-fetcher-app.git
+
+# Navigate to the project folder
+cd user-fetcher-app
+
+# Install dependencies
+npm install
+
+# Start development server
+npm start
+```
+
+---
+
+### 📚 How It Works
+
+- useEffect runs once when the component mounts.
+- The app makes an API call using fetch.
+- While loading, it displays "Loading Users...".
+- If successful, it lists all users’ names and emails.
+- If there's an error, it shows an error message in red.
+
+### 🖥️ UI Preview
+
+```text
+
+👥 User List
+-----------------
+John Doe – john@example.com
+Jane Smith – jane@example.com
+```
+
+---
+
+### 🧑‍💻 Code Example
+
+```javascript
+useEffect(() => {
+  fetch("https://jsonplaceholder.typicode.com/users")
+    .then((res) => {
+      if (!res.ok) throw new Error("Failed to fetch users");
+      return res.json();
+    })
+    .then((data) => {
+      setUsers(data);
+      setLoading(false);
+    })
+    .catch((err) => {
+      setError(err.message);
+      setLoading(false);
+    });
+}, []);
+```
+
+---
+
+### 📜 License
+
+This project is licensed under the MIT License – free to use and modify.
